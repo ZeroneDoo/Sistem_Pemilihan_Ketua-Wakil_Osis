@@ -58,6 +58,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['kelas'])){
             background: transparent;
             margin-left: 10px;
         }
+        @media screen and (max-width: 800px){input{width: 100%;}}
         input:focus{
             outline: 1px blue solid;
             border: transparent;

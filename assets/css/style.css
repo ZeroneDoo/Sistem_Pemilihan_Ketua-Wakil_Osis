@@ -401,4 +401,143 @@ section img {
 .space a:hover {
   background-color: white;
   color: #1D4B73;
+}
+
+.log {
+  display: flex;
+  justify-content: center;
+  background-color: #1D4B73;
+  height: 100vh;
+}
+.log .box {
+  top: -8vh;
+  background-color: white;
+  padding: 50px 50px 100px 50px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+  top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/img/image21.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.log .siswa {
+  background-image: url("assets/img/image21.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.log input {
+  border: none;
+  border: 1px black solid;
+  width: 28vw;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 5px;
+  opacity: 99%;
+  background: transparent;
+  margin-left: 10px;
+}
+@media screen and (max-width: 800px) {
+  .log input {
+    width: 90%;
+  }
+}
+.log input:focus {
+  outline: 1px #1D4B73 solid;
+  border: transparent;
+}
+.log table {
+  width: 369px;
+  height: 178px;
+}
+.log td {
+  font-size: 15px;
+}
+.log button {
+  border: 1px black solid;
+  background: transparent;
+  padding: 4px 15px;
+  cursor: pointer;
+}
+
+.create {
+  font-family: QuickSands;
+  /* font-size: ; */
+  background-color: #0968A8;
+}
+.create form {
+  /* border: 1px solid black; */
+  top: -8vh;
+  background-color: white;
+  padding: 50px 50px 100px 50px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+  height: 5%;
+  border-radius: 12px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 150px auto;
+  background-color: white;
+  box-shadow: 2px 2px 4px #000;
+}
+@media screen and (max-width: 800px) {
+  .create form {
+    width: 95%;
+  }
+}
+.create table {
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 2vh;
+}
+.create textarea {
+  margin-left: 2.5vw;
+  /* margin-top: 0vh; */
+  width: 83%;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  height: 120px;
+}
+.create textarea:focus {
+  outline: 1px #0968A8 solid;
+  border: transparent;
+}
+.create .nama {
+  font-size: 14px;
+  padding-top: 15px;
+}
+.create .in {
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 7px;
+}
+.create .in:focus {
+  outline: 1px #0968A8 solid;
+  border: transparent;
+  border-radius: 2px;
+}
+.create a,
+.create .buat {
+  border: none;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #0968A8;
+  padding: 5px;
+  color: white;
+  border-radius: 3px;
+  width: 58%;
+}
+.create .btn {
+  width: fit-content;
+  margin: 5px auto;
 }/*# sourceMappingURL=style.css.map */

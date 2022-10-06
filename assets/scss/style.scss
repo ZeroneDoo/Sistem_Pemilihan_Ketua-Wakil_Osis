@@ -333,3 +333,134 @@ section{
         color: $blue_dark;
     }
 }
+// login
+.log{
+    display: flex;
+    justify-content: center;
+    background-color: $blue_dark;
+    height: 100vh;
+    .box{
+    @include card(100%);
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/img/image21.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.siswa{
+    background-image: url("assets/img/image21.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+input{
+    border: none;
+    border: 1px black solid;
+    width: 28vw;
+    @media screen and (max-width: 800px){width: 90%;}
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    opacity: 99%;
+    background: transparent;
+    margin-left: 10px;
+}
+input:focus{
+    outline: 1px $blue_dark solid;
+    border: transparent;
+}
+table{
+    width: 369px;
+    height: 178px;
+}
+td{
+    font-size: 15px;
+}
+button{
+    border: 1px black solid;
+    background: transparent;
+    padding: 4px 15px;
+    cursor: pointer;
+}
+}
+
+// Create tambah kandidat
+        .create{
+            font-family: QuickSands;
+            /* font-size: ; */
+
+            background-color: #0968A8;
+            form {
+            /* border: 1px solid black; */
+            @include card(50%);
+            @media screen and (max-width: 800px){width: 95%;}
+            height: 5%;
+            border-radius: 12px;
+            box-sizing: border-box;
+            position: relative;
+            margin: 150px auto;
+            background-color: white;
+            box-shadow: 2px 2px 4px #000;
+            ;
+        }
+
+        table {
+            width: 100%;
+            padding: 30px;
+            padding-bottom: 2vh;
+        }
+
+        textarea {
+            margin-left: 2.5vw;
+            /* margin-top: 0vh; */
+            width: 83%;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 14px;
+            height: 120px;
+        }
+
+        textarea:focus {
+            outline: 1px #0968A8 solid;
+            border: transparent;
+        }
+
+        .nama {
+            font-size: 14px;
+            padding-top: 15px;
+
+        }
+
+        .in {
+            width: 90%;
+            border: none;
+            border-bottom: 1px solid black;
+            padding: 7px
+        }
+
+        .in:focus {
+            outline: 1px #0968A8 solid;
+            border: transparent;
+            border-radius: 2px;
+        }
+
+        a,
+        .buat {
+            border: none;
+            font-size: 14px;
+            text-decoration: none;
+            background-color: #0968A8;
+            padding: 5px;
+            color: white;
+            border-radius: 3px;
+            width: 58%;
+        }
+
+        .btn {
+            width: fit-content;
+            margin: 5px auto;
+        }
+        }
+
+        
