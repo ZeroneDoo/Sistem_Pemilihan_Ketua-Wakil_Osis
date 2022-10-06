@@ -1,0 +1,335 @@
+// @font-face {
+//     font-family: QuickSands;
+//     src: url(../quicksand-v30-latin-regular.woff2);          Use this when use link:css in html
+// }
+@font-face {
+    font-family: QuickSands;
+    src: url(assets/quicksand-v30-latin-regular.woff2);
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: QuickSands;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+@mixin card($width: 70%, ) {
+    top: -8vh;
+    background-color: $white;
+    padding: 50px 50px 100px 50px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    width: $width;
+    margin: 0 auto;
+    border-radius: 15px;
+    position: relative;
+}
+$blue_dark: #1D4B73;
+$white: white;
+$grey: #D9D9D9;
+
+// for scrollbar
+::-webkit-scrollbar{
+    background-color: $blue_dark;
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: $grey; 
+}
+// font-Style
+h1{
+    font-size: 26px;
+}
+.line{
+    border-bottom: $blue_dark 1px solid;
+    width: fit-content;
+}.line::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: 15px;
+    background-color: $blue_dark;
+}
+p{
+    font-size: 15px;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 16px;
+    font-weight: lighter;
+}
+@media screen and (max-width: 1172px){
+    h1{
+        font-size: 23px;
+    }
+    p{
+        font-size: 12px;
+    }
+    h2{
+        font-size: 17px;
+    }
+    h3{
+        font-size: 13px;
+        font-weight: lighter;
+    }
+}
+// navbar style
+nav{
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: $blue_dark;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    a{
+        color: $white;
+        padding: 5px 20px;
+        border-radius: 5px;
+    }
+    a:hover{
+        background-color: $white;
+        color: $blue_dark;
+    }
+}
+@media screen and (max-width: 791px){
+    .leftbar{
+        display: none;
+    }
+}
+// header, img and card style
+header{
+    img{
+        width: 100%;
+    }
+    .col_card{
+        @include card();
+        @media screen and (max-width: 1172px){width: 80%;}
+        @media screen and (max-width: 791px){width: 90%;}
+        p{
+            margin-top: 50px;
+        }
+    }
+    img:nth-child(2){
+        max-width: 28%;
+        @media screen and (max-width: 1172px){max-width: 30%;}
+        @media screen and (max-width: 560px){max-width: 100%; float: left;}
+        float: right;
+        margin-bottom: 50px;
+    }
+}
+// main page 
+main{
+    @include card();
+    @media screen and (max-width: 1172px){width: 80%;}
+    @media screen and (max-width: 791px){width: 90%;}
+    padding: 50px 0;
+    .text{
+        max-width: 65%;
+        text-align: center;
+        margin: 0 auto 65px auto;
+    }
+    h1{
+        font-size: 22px;
+        font-weight: bolder;
+    }
+    .nametxt{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 5px 50px;
+        margin-bottom: 1px;
+        p{
+            width: fit-content;
+            display: inline-block;
+            position: relative;
+            top: 10px;
+        }
+        h6{
+            padding: 20px;
+            max-width: 90%;
+            display: none;
+            line-height: 1.5;
+        }
+        // for arrow in main card
+        .arr{
+            display: flex;
+            cursor: pointer;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            span{
+                position: relative;
+                top: -1.2vh;
+            }
+        }
+        .arr .change + h6{
+            display: inline-block;
+        }
+    }
+}
+// card 
+section{
+    form{
+        position: relative;
+    }
+    max-width: 75%;
+    @media screen and (max-width: 1172px){max-width: 90%;}
+    margin:  0 auto;
+    .card{
+        @include card(25%);
+        @media screen and (max-width: 1172px){width: 40%;}
+        @media screen and (max-width: 800px){width: 38%;}
+        @media screen and (max-width: 700px){width: 90%;}
+        text-align: center;
+        margin: 35px 35px;
+        p{
+            height: 8vh;
+            overflow: hidden;
+            margin: 20px auto;
+            @media screen and (max-width: 1172px){height: 8.5vh;}
+        }
+        h2{
+            min-height: 50px;
+        }
+    }
+    input[type="radio"] {
+        display: none;  
+        &:not(:disabled) ~ label {
+          cursor: pointer;
+        }
+        &:disabled ~ label {
+          color: hsla(150, 5%, 75%, 1);
+          border-color: hsla(150, 5%, 75%, 1);
+          box-shadow: none;
+          cursor: not-allowed;
+        }
+      }
+    label {
+        height: 100%;
+        display: inline-block;
+        background: white;
+        border: 2px solid $grey;
+        //margin: 1rem;
+        text-align: center;
+        position: relative;
+        span.material-symbols-outlined{
+            display: none;
+            background-color: $blue_dark;
+            color: $white;
+        }
+    }
+    input[type="submit"]{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $blue_dark;
+        margin: 20px;
+        color: $white;
+        padding: 5px 20px;
+        border-radius: 5px;
+    }input[type="submit"]:hover{
+        background-color: $white;
+        color:$blue_dark;
+    }
+    input[type="radio"]:checked + label {
+        border-color: $blue_dark;
+        box-shadow: 0px 0px 20px $blue_dark;
+        span{
+            display: inline-block;
+        }
+    }
+    img{
+        border-radius: 50%;
+        width: 70px;
+    }
+}
+// Dashboard
+.dashboard input[type="radio"]:checked + label{
+    span{
+        padding: 5px;
+        background-color: transparent;
+        color: $blue_dark;
+    }
+}
+.space{
+    padding: 30px;
+    background-color: $grey;
+    min-height: 10vh;
+    margin: 5px 0;
+    input[type="text"]{
+        width: 25%;
+        padding: 6px 11px;
+        color: #222;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        &:focus{outline: 1px solid $blue_dark;}
+        @media screen and (max-width: 1172px){width: 40%;}
+    }input[type="submit"]{
+            background-color: $blue_dark;
+            padding: 5px 10px;
+            color: $white;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            &:hover{
+            background-color: $white;
+            color: $blue_dark;
+        }
+    }
+    .right{
+        float: right;
+    }
+    .card{
+        display: inline-block;
+        @include card(20%);
+        @media screen and (max-width: 1172px){width: 40%;}
+        @media screen and (max-width: 800px){width: 90%;}
+        padding: 15px 20px;
+        overflow: auto;
+        top: 0;
+        margin: 30px;
+        .txt{
+            margin: 15px;
+        }
+        img{
+            width: 70px;
+            float: left;
+            margin: 5px;
+            border-radius: 15px;
+        }
+        p{
+            float: left;
+            margin-bottom: 50px;
+        }
+    }
+    a{
+        background-color: $blue_dark;
+        padding: 5px 10px;
+        color: $white;
+        border-radius: 5px;
+    }
+    a:hover{
+        background-color: $white;
+        color: $blue_dark;
+    }
+}

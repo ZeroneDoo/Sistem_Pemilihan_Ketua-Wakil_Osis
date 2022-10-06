@@ -1,0 +1,404 @@
+@font-face {
+  font-family: QuickSands;
+  src: url(assets/quicksand-v30-latin-regular.woff2);
+}
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: QuickSands;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  background-color: #1D4B73;
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+.line {
+  border-bottom: #1D4B73 1px solid;
+  width: fit-content;
+}
+
+.line::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  background-color: #1D4B73;
+}
+
+p {
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 1172px) {
+  h1 {
+    font-size: 23px;
+  }
+  p {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+  h3 {
+    font-size: 13px;
+    font-weight: lighter;
+  }
+}
+nav {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background-color: #1D4B73;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+nav a:hover {
+  background-color: white;
+  color: #1D4B73;
+}
+
+@media screen and (max-width: 791px) {
+  .leftbar {
+    display: none;
+  }
+}
+header img {
+  width: 100%;
+}
+header .col_card {
+  top: -8vh;
+  background-color: white;
+  padding: 50px 50px 100px 50px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+}
+@media screen and (max-width: 1172px) {
+  header .col_card {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 791px) {
+  header .col_card {
+    width: 90%;
+  }
+}
+header .col_card p {
+  margin-top: 50px;
+}
+header img:nth-child(2) {
+  max-width: 28%;
+  float: right;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1172px) {
+  header img:nth-child(2) {
+    max-width: 30%;
+  }
+}
+@media screen and (max-width: 560px) {
+  header img:nth-child(2) {
+    max-width: 100%;
+    float: left;
+  }
+}
+
+main {
+  top: -8vh;
+  background-color: white;
+  padding: 50px 50px 100px 50px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+  padding: 50px 0;
+}
+@media screen and (max-width: 1172px) {
+  main {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 791px) {
+  main {
+    width: 90%;
+  }
+}
+main .text {
+  max-width: 65%;
+  text-align: center;
+  margin: 0 auto 65px auto;
+}
+main h1 {
+  font-size: 22px;
+  font-weight: bolder;
+}
+main .nametxt {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 5px 50px;
+  margin-bottom: 1px;
+}
+main .nametxt p {
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+main .nametxt h6 {
+  padding: 20px;
+  max-width: 90%;
+  display: none;
+  line-height: 1.5;
+}
+main .nametxt .arr {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+main .nametxt .arr span {
+  position: relative;
+  top: -1.2vh;
+}
+main .nametxt .arr .change + h6 {
+  display: inline-block;
+}
+
+section {
+  max-width: 75%;
+  margin: 0 auto;
+}
+section form {
+  position: relative;
+}
+@media screen and (max-width: 1172px) {
+  section {
+    max-width: 90%;
+  }
+}
+section .card {
+  top: -8vh;
+  background-color: white;
+  padding: 50px 50px 100px 50px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  margin: 35px 35px;
+}
+@media screen and (max-width: 1172px) {
+  section .card {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  section .card {
+    width: 38%;
+  }
+}
+@media screen and (max-width: 700px) {
+  section .card {
+    width: 90%;
+  }
+}
+section .card p {
+  height: 8vh;
+  overflow: hidden;
+  margin: 20px auto;
+}
+@media screen and (max-width: 1172px) {
+  section .card p {
+    height: 8.5vh;
+  }
+}
+section .card h2 {
+  min-height: 50px;
+}
+section input[type=radio] {
+  display: none;
+}
+section input[type=radio]:not(:disabled) ~ label {
+  cursor: pointer;
+}
+section input[type=radio]:disabled ~ label {
+  color: hsl(150deg, 5%, 75%);
+  border-color: hsl(150deg, 5%, 75%);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+section label {
+  height: 100%;
+  display: inline-block;
+  background: white;
+  border: 2px solid #D9D9D9;
+  text-align: center;
+  position: relative;
+}
+section label span.material-symbols-outlined {
+  display: none;
+  background-color: #1D4B73;
+  color: white;
+}
+section input[type=submit] {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #1D4B73;
+  margin: 20px;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+section input[type=submit]:hover {
+  background-color: white;
+  color: #1D4B73;
+}
+section input[type=radio]:checked + label {
+  border-color: #1D4B73;
+  box-shadow: 0px 0px 20px #1D4B73;
+}
+section input[type=radio]:checked + label span {
+  display: inline-block;
+}
+section img {
+  border-radius: 50%;
+  width: 70px;
+}
+
+.dashboard input[type=radio]:checked + label span {
+  padding: 5px;
+  background-color: transparent;
+  color: #1D4B73;
+}
+
+.space {
+  padding: 30px;
+  background-color: #D9D9D9;
+  min-height: 10vh;
+  margin: 5px 0;
+}
+.space input[type=text] {
+  width: 25%;
+  padding: 6px 11px;
+  color: #222;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.space input[type=text]:focus {
+  outline: 1px solid #1D4B73;
+}
+@media screen and (max-width: 1172px) {
+  .space input[type=text] {
+    width: 40%;
+  }
+}
+.space input[type=submit] {
+  background-color: #1D4B73;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+.space input[type=submit]:hover {
+  background-color: white;
+  color: #1D4B73;
+}
+.space .right {
+  float: right;
+}
+.space .card {
+  display: inline-block;
+  top: -8vh;
+  background-color: white;
+  padding: 50px 50px 100px 50px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  width: 20%;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+  padding: 15px 20px;
+  overflow: auto;
+  top: 0;
+  margin: 30px;
+}
+@media screen and (max-width: 1172px) {
+  .space .card {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .space .card {
+    width: 90%;
+  }
+}
+.space .card .txt {
+  margin: 15px;
+}
+.space .card img {
+  width: 70px;
+  float: left;
+  margin: 5px;
+  border-radius: 15px;
+}
+.space .card p {
+  float: left;
+  margin-bottom: 50px;
+}
+.space a {
+  background-color: #1D4B73;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+}
+.space a:hover {
+  background-color: white;
+  color: #1D4B73;
+}/*# sourceMappingURL=style.css.map */
