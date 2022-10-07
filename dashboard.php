@@ -35,6 +35,24 @@ $r = mysqli_fetch_array($result);
         <div class="rightbar">
             <a href=""> <?=$r['username']?> | </a>
             <a href="admin/logout-admin.php">Log Out</a>
+            <div id="btn" class="swich">
+            <span  class="material-symbols-outlined" id="mode"">dark_mode</span>
+            </div>
+            <!-- dark-mode -->
+            <script>
+                let y = document.getElementById('mode');
+                let body = document.querySelector("body");
+                y.addEventListener ("click", function(){
+                    y.classList.toggle("mode");
+                    document.getElementById("btn").classList.toggle("dank");
+                    if(y.classList.contains("mode")){
+                        y.innerHTML = "light_mode"
+                    }else{
+                        y.innerHTML = "dark_mode"
+                    }
+                    document.querySelector("body").classList.toggle("dark")
+                })
+            </script>
         </div>
     </nav>
     <header>

@@ -16,69 +16,14 @@ if(isset($_SESSION['username']) && isset($_SESSION['kelas'])){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <title>Login - Pemilihan Osis</title>
+    <!-- <style>
+       
+    </style> -->
     <style>
-        * {
-            margin: 0;
-            font-family: 'Quicksand', sans-serif;
-            box-sizing: border-box;
-            text-decoration: none;
-        }
-
-        a{
-            color: darkblue;
-            font-weight: medium;
-        }
-        
-        body {
-            display: flex;
-            justify-content: center;
-            background-color: #1B4B6C;
-        }
-        .box{
-            margin: 100px;
-            width: 600px;
-            height: 400px;
-            border-radius: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url("assets/img/image21.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        input{
-            border: none;
-            border: 1px black solid;
-            width: 28vw;
-            padding: 8px;
-            font-size: 15px;
-            border-radius: 5px;
-            opacity: 99%;
-            background: transparent;
-            margin-left: 10px;
-        }
-        @media screen and (max-width: 800px){input{width: 100%;}}
-        input:focus{
-            outline: 1px blue solid;
-            border: transparent;
-        }
-        table{
-            width: 369px;
-            height: 178px;
-        }
-        td{
-            font-size: 15px;
-        }
-        button{
-            border: 1px black solid;
-            background: transparent;
-            padding: 4px 15px;
-            cursor: pointer;
-        }
+        <?php include 'assets/css/style.css'?>
     </style>
 </head>
-<body>
+<body class="log siswa">
     <form action="login.php" method="post">
         <div class="box">
         <table cellpadding="13">
@@ -123,7 +68,9 @@ if(isset($_SESSION['username']) && isset($_SESSION['kelas'])){
             }elseif($_SESSION['username'] == "admin" && $pass = 1234){
                 header("Location: dashboard.php");
             }else{
-                header("Location: index.php");
+                echo "<script>
+                document.location.href = 'index.php'
+                </script>";
             }
 
         }else{

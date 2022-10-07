@@ -35,7 +35,7 @@ if( !isset($_SESSION['username']) && !isset($_SESSION['kelas']) ){
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body >
     <span id="empty"></span>
     <nav>
         <div class="leftbar">
@@ -47,13 +47,17 @@ if( !isset($_SESSION['username']) && !isset($_SESSION['kelas']) ){
         <div class="rightbar">
             <a href=""><?=$siswarr['nama']?> | <?=$_SESSION['kelas']?></a>
             <a href="logout.php">Log Out</a>
+            <div id="btn" class="swich">
+            <span  class="material-symbols-outlined" id="mode"">dark_mode</span>
+            </div>
+            <!-- dark-mode -->
         </div>
     </nav>
     <header>
         <img src="assets/img/hero-smk-bisa.png" alt="smk-bisa-hebat">
         <div class="col_card">
             <h1 class="line">Pemilu OSIS 2020-2021</h1>
-            <img  src="assets/img/Graphic chart_Monochromatic 1.png" alt="">
+            <img id="img_change" src="assets/img/Graphic chart_Monochromatic 1.png" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis</p>
         </div>
     </header>
@@ -185,7 +189,6 @@ if( !isset($_SESSION['username']) && !isset($_SESSION['kelas']) ){
 
 
     
-    <script src="assets/JS/main.js">
-    </script>
+    <script src="assets/JS/main.js"></script>
 </body>
 </html>
