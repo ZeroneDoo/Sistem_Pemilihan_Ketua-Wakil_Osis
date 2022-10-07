@@ -15,90 +15,10 @@ if ($_SESSION['username'] !== "admin") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Kandidat - Pemilihan Ketua & Wakil Ketua</title>
     <style>
-        @font-face {
-        font-family: QuickSands;
-        src: url(assets/quicksand-v30-latin-regular.woff2);
-        }
-        body {
-            font-family: QuickSands;
-            /* font-size: ; */
-
-            background-color: #0968A8;
-        }
-
-        form {
-            /* border: 1px solid black; */
-            padding: 20px;
-            width: 600px;
-            height: 5%;
-            border-radius: 12px;
-            box-sizing: border-box;
-            position: relative;
-            margin: 150px auto;
-            background-color: white;
-            box-shadow: 2px 2px 4px #000;
-            ;
-        }
-
-        table {
-            position: relative;
-            padding: 30px;
-            padding-bottom: 2vh;
-        }
-
-        textarea {
-            margin-left: 2.5vw;
-            /* margin-top: 0vh; */
-            width: 480px;
-            border-radius: 5px;
-            padding: 8px;
-            font-size: 14px;
-            height: 120px;
-        }
-
-        textarea:focus {
-            outline: 1px #0968A8 solid;
-            border: transparent;
-        }
-
-        .nama {
-            font-size: 14px;
-            padding-top: 15px;
-
-        }
-
-        .in {
-            width: 350px;
-            border: none;
-            border-bottom: 1px solid black;
-            padding: 7px
-        }
-
-        .in:focus {
-            outline: 1px #0968A8 solid;
-            border: transparent;
-            border-radius: 2px;
-        }
-
-        a,
-        .buat {
-            border: none;
-            font-size: 14px;
-            text-decoration: none;
-            background-color: #0968A8;
-            padding: 5px;
-            color: white;
-            border-radius: 3px;
-        }
-
-        .btn {
-            margin-left: 33.5vh;
-            margin-top: 9px;
-        }
+        <?php include '../assets/css/style.css'?>
     </style>
 </head>
-
-<body>
+<body class="create">
     <form action="simpan.php" method="POST">
         <table cellpadding="6">
             <tr>

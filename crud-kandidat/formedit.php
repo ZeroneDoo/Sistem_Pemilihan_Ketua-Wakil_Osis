@@ -19,95 +19,16 @@ if (mysqli_num_rows($query) < 1){
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @font-face {
-        font-family: QuickSands;
-        src: url(assets/quicksand-v30-latin-regular.woff2);
-        }
-        body {
-            font-family: QuickSands;
-            /* font-size: ; */
-            background-color: #0968A8;
-        }
-
-        form {
-            /* border: 1px solid black; */
-            padding: 20px;
-            width: 650px;
-            height: fit-content;
-            border-radius: 12px;
-            box-sizing: border-box;
-            position: relative;
-            margin: 150px auto;
-            background-color: white;
-            box-shadow: 2px 2px 4px #000;
-            ;
-        }
-
-        .img{
-            background-image: url("../assets/img/<?= $kndt['profile']?>");
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 40px;
-            height: fit-content;
-            border-radius: 50%;
-        }
-
-        table {
-            position: relative;
-            padding: 30px;
-            padding-bottom: 2vh;
-        }
-
-        textarea {
-            margin-left: 2.5vw;
-            /* margin-top: 0vh; */
-            width: 480px;
-            height: 120px;
-        }
-
-        .nama {
-            font-size: 14px;
-            padding-top: 15px;
-
-        }
-
-        .in {
-            width: 350px;
-            border: none;
-            border-bottom: 1px solid black;
-            padding: 7px
-        }
-
-        .in:focus {
-            outline: 1px #0968A8 solid;
-            border: transparent;
-            border-radius: 2px;
-        }
-
-        a,
-        .buat {
-            border: none;
-            font-size: 14px;
-            text-decoration: none;
-            background-color: #0968A8;
-            padding: 5px;
-            color: white;
-            border-radius: 3px;
-        }
-
-        .btn {
-            margin-left: 33.5vh;
-            margin-top: 9px;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Data</title>
+        <style>
+        <?php include '../assets/css/style.css'?>
     </style>
-    <title>Edit Data</title>
 </head>
-<body>
+<body class="create">
     
 <form action="" method="POST" enctype="multipart/form-data">
         <table cellpadding="6">
