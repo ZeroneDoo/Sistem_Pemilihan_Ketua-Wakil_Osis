@@ -396,7 +396,7 @@ section img {
   padding: 15px 20px;
   overflow: auto;
   top: 0;
-  margin: 30px 50%;
+  margin: 30px;
 }
 @media screen and (max-width: 1172px) {
   .space .card {
